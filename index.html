@@ -1,3 +1,106 @@
-<html>
-  New site!
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="PSpudi">
+  <title>CityMix</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="./assets/main.css" rel="stylesheet">
+
+</head>
+<body class="d-flex h-100 w-100 text-center bg-dark-custom">
+
+  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+    <div class="position-sticky pt-3">
+      <h2>Mała ściąga:</h2>
+      <div id="base-seeds">
+        <span>Podstawowe nasiona:</span>
+        <p>Haze, Afgan Kush, LemonG, Zkittlez</p>
+      </div>
+      <div id="seeds-all">
+        <span>Nasiona do stworzenia: <br>Ilość to zawsze "1".</span>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nasiono</th>
+              <th>Pierwszy składnik</th>
+              <th>Drugi składnik</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="seed-name">Train Haze</td><td>LemonG</td><td>Zkittlez</td></tr>
+            <tr><td class="seed-name">Purple Haze</td><td>Haze</td><td>Afgan Kush</td></tr>
+            <tr><td class="seed-name">Blueberry</td><td>Purple Haze</td><td>Afgan Kush</td></tr>
+            <tr><td class="seed-name">G13</td><td>Train Haze</td><td>LemonG</td></tr>
+            <tr><td class="seed-name">Daddy Purple</td><td>G13</td><td>Haze</td></tr>
+            <tr><td class="seed-name">Charlott's Web</td><td>Blueberry</td><td>Zkittlez</td></tr>
+            <tr><td class="seed-name">Strawberry Cough</td><td>Daddy Purple</td><td>Charlott's Web</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </nav>
+
+  <div class="d-flex p-3 mx-auto flex-column justify-content-center">
+    <main class="p-3">
+      <h2>Wybierz nasiono i podaj ilość jaką chcesz wytworzyć</h2>
+      <form class="row" id="seed-calc-form">
+        <div class="col-auto">
+          <select class="form-select" id="seed-select">
+            <option value="train-haze">Train Haze</option>
+            <option value="purple-haze">Purple Haze</option>
+            <option value="blueberry">Blueberry</option>
+            <option value="g13">G13</option>
+            <option value="daddy-purple">Daddy Purple</option>
+            <option value="charlotts-web">Charlott's Web</option>
+            <option value="strawberry-cough">Strawberry Cough</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <input class="form-control" type="number" id="seed-qty" value="1"/>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-secondary" onclick="calculate()">Policz</button>
+        </div>
+      </form>
+    </main>
+    <main class="p-3" style="min-width: 55rem">
+      <div class="row">
+        <div class="col">
+          <table id="seeds-calc-table" class="table table-borderless" hidden>
+            <thead>
+            <tr>
+              <th>Nasiono</th>
+              <th>Ilość</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="col" hidden>
+          <h4>Suma bazowych nasion które potrzebujesz:</h4>
+          <table id="seeds-calc-sum" class="table table-borderless">
+            <thead>
+            <tr>
+              <th>Nasiono</th>
+              <th>Ilość</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-auto text-white-50">
+      <p>CityMix, by PSpudi.</p>
+    </footer>
+  </div>
+  <script src="./assets/main.js"></script>
+  <script src="./assets/schema/seeds.js"></script>
+</body>
 </html>
