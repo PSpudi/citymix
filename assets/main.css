@@ -1,21 +1,7 @@
 /*
- * Globals
- */
-
-/* Custom default button */
-/*.btn-secondary,*/
-/*.btn-secondary:hover,*/
-/*.btn-secondary:focus {*/
-/*    color: #fff;*/
-/*    background-color: #002C5B;*/
-/*    border: none;*/
-/*    text-shadow: none; !* Prevent inheritance from `body` *!*/
-/*}*/
-
-
-/*
  * Base structure
  */
+
 
 .bg-dark-custom {
     background-color: #050F19;
@@ -133,8 +119,12 @@ body {
     font-weight: bold;
 }
 
-.complicated-base {
-    /*background-color: darkslategrey;*/
+.complicated-base-1, .complicated-child-1 {
+    background-color: rgba(0,69,143, 0.2);
+}
+
+.complicated-base-2, .complicated-child-2 {
+    background-color: rgba(0,69,143, 0.1);
 }
 
 .complicated-base-1 #name::before, .complicated-child-1 #name::before {
@@ -149,8 +139,17 @@ body {
     content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0|-- ";
 }
 
+.complicated-parent {
+    background-color: rgba(0,69,143, 0.4);
+}
+
 table {
     margin-top: 30px;
+}
+
+.table {
+    --bs-table-striped-bg: rgba(0,69,143, 0.2);
+    --bs-table-striped-color: #fff;
 }
 
 tbody {
